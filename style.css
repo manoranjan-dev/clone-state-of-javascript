@@ -264,6 +264,12 @@ img {
 
             p{
                 font-weight: 600;
+                margin: 0 1rem;
+
+                a{
+                    margin: 0;
+                    padding: 0;
+                }
             }
         }
     }
