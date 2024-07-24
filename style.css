@@ -22,11 +22,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
-img{
+
+img {
     width: 80%;
     cursor: pointer;
 }
+
 /* global style ends */
 
 /* nav section style starts */
@@ -44,6 +47,7 @@ img{
 
         span {
             align-content: center;
+            width: 200px;
         }
 
         .survey-list {
@@ -74,25 +78,25 @@ img{
         width: 90%;
     }
 }
+
 /* nav section style ends */
 
 .container {
     max-width: 80%;
     text-align: center;
-    border: 1px solid #8D4CA8;
 
-    .heading{
+    .heading {
         width: 100%;
-        border: 1px solid;
         padding: 1rem 0 2rem;
         margin: 1rem 0;
 
-        h1{
+        h1 {
             font-size: 48px;
             padding: 0;
             margin: 0;
         }
-        p{
+
+        p {
             margin: 0;
             font-size: 16px;
             font-weight: 500;
@@ -100,36 +104,38 @@ img{
         }
     }
 
-    .survey-card{
+    .survey-card {
         margin: 1rem 0;
 
-        .survey-banner{
+        .survey-banner {
             background-color: var(--background);
             border-radius: 4px;
 
-            .survey-tags{
+            .survey-tags {
                 display: flex;
                 justify-content: space-between;
 
-                p{
+                p {
                     margin: 0;
                     padding: 8px 12px;
                     text-transform: uppercase;
                     font-weight: 600;
                     background-color: var(--secondary);
                 }
-                .year{
+
+                .year {
                     background-color: var(--primary);
                     color: var(--background);
                 }
             }
         }
-        .survey-action{
+
+        .survey-action {
             display: flex;
             width: 100%;
             margin: .5rem 0;
-            
-            button{
+
+            button {
                 background-color: transparent;
                 padding: 1rem 2rem;
                 outline: none;
@@ -141,24 +147,26 @@ img{
                 width: 50%;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 border: 1px solid var(--primary);
             }
         }
     }
 
-    .content{
+    .content {
         padding: 1rem 0;
     }
-    .email-form{
+
+    .email-form {
         background-color: var(--background);
         padding: 1rem .6rem;
 
-        form{
+        form {
             width: 100%;
             display: flex;
 
-            input{
+            input {
                 font-family: "IBM Plex Mono", monospace;
                 width: 70%;
                 font-size: 16px;
@@ -167,7 +175,8 @@ img{
                 outline: none;
                 border: none;
             }
-            button{
+
+            button {
                 background-color: transparent;
                 padding: 1rem 1.2rem;
                 outline: none;
@@ -180,8 +189,81 @@ img{
                 margin-left: 6px;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 border: 1px solid var(--primary);
+            }
+        }
+    }
+
+    .past-survey {
+        /* display: flex; */
+
+        h2 {
+            text-align: left;
+        }
+
+        .past-survey-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.4rem;
+
+            .survey-card {
+                margin: 0;
+
+                .survey-tags {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .past-survey-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .footer {
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 8px;
+            padding: 0;
+            cursor: pointer;
+        }
+        .lang-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 2.4rem 0;
+            padding: 1.6rem 0;
+            border-top: 1px dashed var(--text);
+
+            h3 {
+                margin: 8px;
+            }
+
+            .active{
+                background-color: var(--primary);
+                color: var(--background);
+                border-radius: 4px;
+                padding: 4px 8px;
+            }
+        }
+
+        .footer-note{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 0;
+
+            p{
+                font-weight: 600;
             }
         }
     }
